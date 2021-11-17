@@ -61,14 +61,44 @@ class HomePage extends StatelessWidget {
         ],
       ),
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: const Color(0xff121315),
+        selectedItemColor: const Color(0xff3f74eb),
+        showUnselectedLabels: true,
+        unselectedItemColor: Colors.white,
         items: [
           BottomNavigationBarItem(
-            icon: Icon(Icons.pie_chart_outlined), 
+            icon: Icon(Icons.pie_chart_outlined),
+            backgroundColor: Color(0xff121315),
             label: 'Assets'
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.trending_up),
+            icon: Icon(Icons.trending_up,),
             label: 'Trade'
+          ),
+          BottomNavigationBarItem(
+            label: '',
+            icon: Container(
+              height: 50.0,
+              width: 50.0,
+              decoration: BoxDecoration(
+                color: Color(0xff3f74eb),
+                borderRadius: BorderRadius.circular(100.0),
+              ),
+              child: Center(
+                child: Icon(
+                  Icons.compare_arrows, 
+                  color: Color(0xff121315)
+                ),
+              ),
+            ),
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.money), 
+            label: 'Pay'
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.star_outline),
+            label: 'For You'
           ),
         ],
       ),
